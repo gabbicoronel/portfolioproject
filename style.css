@@ -1,27 +1,53 @@
 
-body {
+body , html {
+    height: 100%;
     font-family: 'Open Sans Condensed', sans-serif;
-    background-image: url(images/Asset\ 4.svg);
-    background-color: #cccccc;
-    height: 500px;
+ 
+}
+header {
+    font-size: 24px;
+    
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Asset\ 4.svg");
+
+    height: 90%;
+  
+    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-      
-}
-/*  cannot seem to edit this to have a gray background over the background photo and the border bottom is on top of the page. why is this happening?? */
-header{
-    background-color: #cccccc;
-    font-size: 26px;
-    border-bottom: black solid 5px;
-    
-
-}
-
-
+  }
 #buttons {
-    margin-top: 500px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     font-size: 60px;
 }
+
+
+footer{
+    font-size: 20px;
+}
+
+.fa-instagram {
+    color: black;
+}
+
+.fa-facebook {
+    color: black;
+}
+
+
+
+
+
+
+
+
 
