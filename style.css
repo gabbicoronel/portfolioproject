@@ -2,11 +2,19 @@
 body , html {
     height: 100%;
     font-family: 'Open Sans Condensed', sans-serif;
+    background-color: white;
  
 }
 header {
     font-size: 24px;
     
+   
+    
+}
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px solid;
+    min-height: 200px; 
 }
 
 .hero-image {
@@ -19,6 +27,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 160px;
   }
 #buttons {
     text-align: center;
@@ -30,9 +39,30 @@ header {
     font-size: 60px;
 }
 
+.menu {
+    font-family: 'Abril Fatface', cursive; 
+    font-size: 60px; 
+    padding-top: 60px;
+}
+.menu-items {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 24px;
+    padding-top: 20px;
+}
+.ourCoffee {
+    margin: 200px 10px;
+    display: inline;
+    position: absolute;
+    width: 300px;
+    font-size: 24px;
+}
 
+.feature {
+    margin: 200px;
+}
 footer{
-    font-size: 20px;
+    font-size: 22px;
+    padding:20px 40px;
 }
 
 .fa-instagram {
@@ -44,7 +74,12 @@ footer{
 }
 
 
-
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
 
 
 
