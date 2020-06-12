@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
@@ -32,40 +32,86 @@
                             <li class="nav-item"><a class="nav-link text-dark" href="#">Our Story</a></li>
                         </ul>
                     </div>
+                    <div class="col-md-4 col-xl-2 col-xs-12 mt-4">
+                        <button type="button" id="newsButton" class="btn bg-dark text-white">Newsletter Sign Up</button>
+                    </div>
             </div>
         </nav>
     </header>
 
-    
+        
+
+        <div id="letterModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                        <h3 class="modal-title text-white">Sign up for Our Newsletter!</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form id="letterModal">
+                                <div class="form-group row">
+                                    <label for="fname" class="col-sm-6 col-form-label">Your First Name</label>
+                                    <input type="text" id="fname" name="fname" placeholder="Name Here"><br>
+                                    <label for="email" class="col-sm-6 col-form-label">Your Email</label>
+                                    <input type="text" id="email" name="email" placeholder="Email Here"> 
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-light">Sign-Up</button>
+                                        <button type="submit" class="btn btn-light" data-dismiss="modal">No Thanks</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10 col-lg-7">
+                    <div class="special"></div>
+                    <div class="card border-dark p-3 mr-5">
+                        <div class="card-body">
+                            <h5 class="card-text">Get <strong>15% off</strong> your first order when you sign up for our newsletter!</h5>
+                            <button type="button" id="discountButton" class="btn btn-dark">Get my discount! </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row row-content">
                 <div class="col-md-6 col-sm-4">
                     <div class="feature"></div>
                     <div class="card" style="width: 22rem;">
-                            <img class="card-img-top" src="images/IMG_9080.jpg" alt="latte">
+                            <img class="d-block card-img-top" src="images/IMG_9080.jpg" alt="latte">
                             <div class="card-body">
-                            <p class="card-text text-center">Voted #1 Best Latte in Bali!</p>
+                            <h4 class="card-text text-center">Voted #1 Best Latte in Bali!</h4>
                     </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 text-md-center">
                     <div class="ourCoffee">
                         <h2 class="font-weight-bold">Our Coffee</h2>
-                        <p class="d-sm-none d-md-inline">We always serve our coffee from the best and freshest ingredients. Our coffee is from Mandailing region in Sumatra, known as Mandailing Coffee. It has a low acidity, floral aroma and sweet after taste. Mixed with our own in-house blend recipe, you will get the best coffee experience you ever tasted.</p>
+                        <p class="d-none d-sm-none d-md-inline">We always serve our coffee from the best and freshest ingredients. Our coffee is from Mandailing region in Sumatra, known as Mandailing Coffee. It has a low acidity, floral aroma and sweet after taste. Mixed with our own in-house blend recipe, you will get the best coffee experience you ever tasted.</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="container">
                 <div class="row row-content">
-                    <div class="col">
+                    <div class="col col-xs-12">
                         <div class="media">
-                            <img class="d-flex-mr-4 img-thumbnail" src="images/IMG_9082.jpg" width="400" height="400" alt="bgs-coffee"/>
+                            <img class="d-flex mr-4 img-thumbnail" src="images/IMG_9082.jpg" width="400" height="400" alt="bgs-coffee"/>
                         </div>
                     </div>
                     <div class="col" class="media-body align-self-center">
                         <h3 class="menu">Menu</h3>
-                        <ul  class="list-unstyled">
+                        <ul class="list-unstyled">
                             <li class="menu-items">Almond Milk Latte</li>
                             <li class="menu-items">Espresso</li>
                             <li class="menu-items">Cappucino</li>
@@ -80,15 +126,28 @@
     
         <div class="container">
             <div class="row row-content">
-                <div class="col" class="media-body align-self-center">
+                <div class="col-sm-4 col-md-3" class="media-body align-self-center">
                     <h2 class="font-weight-bold">Where to find us</h2>
                 </div>
-                <div class="col">
+                <div id="locaTh" class="col d-sm-flex">
+                   
                     <div class="media">
-                        <img class="d-flex-mr-2" src="images/IMG_9087.jpg" width="300" height="300"/>
-                        <img class="d-flex-mr-2" src="images/IMG_9088.jpg" width="300" height="300"/>
-                        <img class="d-flex-mr-2" src="images/IMG_9089.jpg" width="300"
-                        height="300"/>
+                        <a href="https://www.google.com/search?q=bgs%20bali%20map&oq=bgs+bali+map&aqs=chrome..69i57j33.9542j0j7&sourceid=chrome&ie=UTF-8&sxsrf=ALeKk00JcSWrGq3XQHuvx672F7TYmJknZQ:1591944824096&npsic=0&rflfq=1&rlha=0&rllag=-8737086,115119699,9787&tbm=lcl&rldimm=8059023361049383336&lqi=CgxiZ3MgYmFsaSBtYXBIwPCt77CvgIAIWh8KB2JncyBtYXAQABACGAAYASIMYmdzIGJhbGkgbWFw&phdesc=f8Gy_peukfg&ved=2ahUKEwiuxvfN2PvpAhUkFjQIHY7dBAEQvS4wAHoECAsQIA&rldoc=1&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9&rlst=f#rlfi=hd:;si:8059023361049383336,l,CgxiZ3MgYmFsaSBtYXBIwPCt77CvgIAIWh8KB2JncyBtYXAQABACGAAYASIMYmdzIGJhbGkgbWFw,y,f8Gy_peukfg;mv:[[-8.6428772,115.1470274],[-8.8312949,115.13016040000001]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9" target="_blank">
+                        <img class="d-flex mr-1 pr-4" src="images/IMG_9087.jpg" width="300" height="300" />
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="https://www.google.com/search?sxsrf=ALeKk03zt9hdUHJzQxMqDcjLmCdPWbOfUQ:1591945306598&q=bgs%20bali%20map&sa=X&ved=2ahUKEwjzooG02vvpAhVBMn0KHU58D-8QvS4wAXoECAsQJw&biw=1233&bih=708&dpr=2&npsic=0&rflfq=1&rlha=0&rllag=-8737086,115119699,9787&tbm=lcl&rldimm=7450312219507418295&lqi=CgxiZ3MgYmFsaSBtYXBIspaIjJGrgIAIWh8KB2JncyBtYXAQABACGAAYASIMYmdzIGJhbGkgbWFw&phdesc=xuU885KM5OE&rldoc=1&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9&rlst=f#rlfi=hd:;si:7450312219507418295,l,CgxiZ3MgYmFsaSBtYXBIspaIjJGrgIAIWh8KB2JncyBtYXAQABACGAAYASIMYmdzIGJhbGkgbWFw,y,xuU885KM5OE;mv:[[-8.6428772,115.1470274],[-8.8312949,115.13016040000001]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9" target="_blank">
+                        <img class="d-flex mr-1 pr-3"  src="images/IMG_9088.jpg" width="290" height="290"/>
+                        </a>
+                    </div>
+                    <div class="media">
+                        <a href="https://www.google.com/search?sxsrf=ALeKk03zt9hdUHJzQxMqDcjLmCdPWbOfUQ:1591945306598&q=bgs%20bali%20map&sa=X&ved=2ahUKEwjzooG02vvpAhVBMn0KHU58D-8QvS4wAnoECAsQMA&biw=1233&bih=708&dpr=2&npsic=0&rflfq=1&rlha=0&rllag=-8737086,115119699,9787&tbm=lcl&rldimm=10113273690051607811&lqi=CgxiZ3MgYmFsaSBtYXBaFwoHYmdzIG1hcCIMYmdzIGJhbGkgbWFw&phdesc=CV97QFPFzNM&rldoc=1&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9&rlst=f#rlfi=hd:;si:10113273690051607811,l,CgxiZ3MgYmFsaSBtYXBaFwoHYmdzIG1hcCIMYmdzIGJhbGkgbWFw,y,CV97QFPFzNM;mv:[[-8.6428772,115.1470274],[-8.8312949,115.13016040000001]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9" target="_blank">
+                        <img class="d-flex mr-1 pr-4" src="images/IMG_9089.jpg" width="300" height="300"/>
+                        </a>
+                    </div>
+                        
+                    
                     </div>
                 </div>
             </div>
@@ -101,31 +160,45 @@
 
 
 
-
-    
-                        
-    
-    
-        
-        
-
-
-
-
-
-
-
 <!-- this is for IG feed at the footer of every page except home page -->
- <div class="d-none d-sm-block">
+ 
     <footer> 
-
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-9b30c1a9-dbbf-49f5-bef2-a5a767a3a60b"></div>
+        <div class="row"> 
+            <div class="col-lg-8">
+            <div class="d-none d-sm-block">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-9b30c1a9-dbbf-49f5-bef2-a5a767a3a60b"> </div> 
+            </div>
+            </div>
+            
+                <div class="d-sm-inline-flex"> 
+                    <div class="col-lg-1 text-sm-center">
+                        <a id="contact" class="text-dark" href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="d-sm-inline-flex"> 
+                    <div class="col-lg-1">
+                        <a class="btn btn-social-icon btn-instagram " href="http://instagram.com/"><i class="fa fa-lg fa-instagram "></i></a>
+                    </div>
+                </div>
+                <div class="d-sm-inline-flex">
+                    <div class="col-lg-1">
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-lg fa-facebook"></i></a>
+                    </div>
+                </div>
+           
+                    
+            
+        </div>   
 
     </footer>
-</div> 
+ 
 
 
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"> </script>
 
 
 </body>
